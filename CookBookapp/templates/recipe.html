@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <h1>{{recipe.name}}</h1>
+    <small><strong>Written by </strong> {{recipe.author}} on {{recipe.date_added}}</small>
+  <hr>
+  <div>
+   <small> <strong>Ingredients - </strong>{{recipe.ingredients | safe}}</small>
+  </div>
+    <div>
+   <small> <strong>Instructions - </strong> {{ recipe.instructions | safe}} </small>
+    </div>
+
+{% endblock %}
